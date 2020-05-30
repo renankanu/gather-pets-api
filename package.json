@@ -2,9 +2,9 @@
   "name": "gather-pets-api",
   "version": "1.0.0",
   "description": "Project API to gather pets",
-  "main": "index.js",
+  "main": "./src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/server.js"
   },
   "keywords": [
     "node",
@@ -15,7 +15,9 @@
   "author": "Renan Kanu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }
