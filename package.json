@@ -4,7 +4,8 @@
   "description": "Project API to gather pets",
   "main": "./src/server.js",
   "scripts": {
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon -- -r esm -r ./src/server.js",
+    "start": "pm2 start ./src/server.js --name gather-pets --watch --no-daemon --node-args=\"-r esm\""
   },
   "keywords": [
     "node",
@@ -15,7 +16,9 @@
   "author": "Renan Kanu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "pm2": "^4.4.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.0.2",
@@ -26,7 +29,6 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.3",
     "nodemon": "^2.0.4",
-    "prettier": "^2.0.5",
-    "sucrase": "^3.15.0"
+    "prettier": "^2.0.5"
   }
 }
