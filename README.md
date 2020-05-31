@@ -2,4 +2,4 @@
 API built with NodeJs(:hammer:)
 
 
-https://badgen.net/badge/icon/terminal?icon=terminal&label
+[![terminal commands](https://badgen.net/badge/icon/terminal?icon=terminal&label)]()
