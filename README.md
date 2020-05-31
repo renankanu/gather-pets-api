@@ -1,2 +1,2 @@
-# gather-pets-api
-API Node.js with docker config
+# Gather Pets API
+API built with NodeJs(:hammer:)
