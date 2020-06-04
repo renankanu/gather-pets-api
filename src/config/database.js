@@ -3,7 +3,7 @@ module.exports = {
   username: 'root',
   password: 'root',
   port: '3306',
-  db: 'gather_pets_db',
+  database: 'gather_pets_db',
   dialect: 'mysql',
   define: {
     timestamps: true,
