@@ -18,8 +18,10 @@
   "dependencies": {
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "mysql2": "^2.1.0",
     "pm2": "^4.4.0",
-    "sequelize": "^5.21.11"
+    "sequelize": "^5.21.11",
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.0.2",

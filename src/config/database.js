@@ -1,9 +1,10 @@
 module.exports = {
-  HOST: '127.0.0.1',
-  USER: 'postgres',
-  PASSWORD: 'UwU',
-  DB: 'somedb',
-  dialect: 'postgres',
+  host: 'gatherpets.com.br',
+  username: 'root',
+  password: 'root',
+  port: '3306',
+  db: 'gather_pets_db',
+  dialect: 'mysql',
   define: {
     timestamps: true,
   },
