@@ -1,3 +1,11 @@
-import app from './app';
+import express from 'express';
+import routes from './routes';
 
-app.listen('3333');
+const app = express();
+
+app.use(express.json());
+app.use(routes);
+
+app.listen(3333, () => {
+  console.log('Start Gather Pets API');
+});
