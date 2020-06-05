@@ -16,6 +16,7 @@
   "author": "Renan Kanu",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",
