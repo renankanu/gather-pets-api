@@ -34,10 +34,11 @@ const User = db.define(
         }
       },
     },
-    defaultScope: {
-      attributes: { exclude: ['password'] },
-    },
   }
 );
+
+User.comparePasswords = (password, userPassword) => {
+  return bcrypt.compare(password, userPassword);
+};
 
 export default User;

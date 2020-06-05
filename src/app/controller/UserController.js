@@ -4,6 +4,7 @@ export async function userListAll(request, response) {
   const users = await User.findAll();
   return response.json(users);
 }
+
 export async function userCreate(request, response) {
   const { name, email, password } = request.body;
   try {
