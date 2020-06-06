@@ -1,7 +1,7 @@
 import User from '../models/User';
 
 export async function userListAll(request, response) {
-  const users = await User.findAll();
+  const users = await User.findAll({ attributes: { exclude: ['password'] } });
   return response.json(users);
 }
 
