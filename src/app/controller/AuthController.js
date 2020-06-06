@@ -5,12 +5,16 @@ export default async function auth(request, response) {
   const user = await User.findOne({
     where: { email },
   });
-  const isMatch = await User.comparePasswords(password, user.password);
-  if (isMatch) {
-    console.log('Password is match');
+  try {
+    const isMatch = await User.comparePasswords(password, user.password);
+    if (isMatch) {
+      console.log('Password is match');
+    }
+    if (!isMatch) {
+      console.log('Password not match');
+    }
+    return response.json(password);
+  } catch (error) {
+    return response.status(500).json(error.message);
   }
-  if (!isMatch) {
-    console.log('Password not match');
-  }
-  return response.json(password);
 }
