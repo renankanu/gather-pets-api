@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import auth from '../app/controller/AuthController';
+import session from '../app/controller/SessionController';
 
 const sessionsRouter = Router();
 
-sessionsRouter.post('/', auth);
+sessionsRouter.post('/', session);
 
 export default sessionsRouter;
