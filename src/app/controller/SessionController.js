@@ -1,7 +1,8 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User';
+import authConfig from '../../config/authentication';
 
-export default async function auth(request, response) {
+export default async function session(request, response) {
   const { email, password } = request.body;
   try {
     const user = await User.findOne({
@@ -15,7 +16,9 @@ export default async function auth(request, response) {
       return response.status(401).json({ error: 'User / Password not valid.' });
     }
     return response.json({
-      token: jwt.sign({ userId: id }, '123', { expiresIn: '1d' }),
+      token: jwt.sign({ userId: id }, authConfig.secret, {
+        expiresIn: authConfig.expiresIn,
+      }),
     });
   } catch (error) {
     return response.status(500).json(error.message);

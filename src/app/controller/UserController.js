@@ -15,3 +15,7 @@ export async function userCreate(request, response) {
     return response.status(500).json({ error: error.message });
   }
 }
+
+export async function userUpdate(request, response) {
+  return response.json({ response: true });
+}
