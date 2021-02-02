@@ -4,7 +4,7 @@ import {
   userCreate,
   userUpdate,
 } from '../app/controller/UserController';
-import authMiddleware from '../app/middlewares/authentication';
+import authMiddleware from '../app/middleware/authentication';
 
 const usersRouter = Router();
 
