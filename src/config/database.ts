@@ -1,4 +1,4 @@
-module.exports = {
+export const development = {
   host: 'gatherpets.com.br',
   username: 'root',
   password: 'root',

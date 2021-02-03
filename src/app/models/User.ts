@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs';
+import * as bcrypt from 'bcrypt'
 import { DataTypes } from 'sequelize';
 
 import db from '../../database';
@@ -28,7 +28,7 @@ const User = db.define(
     timestamps: true,
     freezeTableName: true,
     hooks: {
-      beforeCreate: async (user) => {
+      beforeCreate: async (user: any) => {
         if (user.password) {
           user.password = await bcrypt.hash(user.password, 8);
         }
@@ -37,7 +37,7 @@ const User = db.define(
   }
 );
 
-User.comparePasswords = (password, userPassword) => {
+User.comparePasswords = (password: string, userPassword: string) => {
   return bcrypt.compare(password, userPassword);
 };
 
