@@ -4,7 +4,7 @@
     "port": 3306,
     "username": "root",
     "password": "root",
-    "database": "gatherpet",
+    "database": "gather_pets_db",
     "synchronize": true,
     "logging": false,
     "entities": ["source/entity/**/*.ts"],

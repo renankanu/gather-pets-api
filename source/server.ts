@@ -7,7 +7,7 @@ import { createConnection } from 'typeorm';
 import logging from './config/logging';
 import config from './config/config';
 import routes from './routes';
-import { User } from '../source/entity/User';
+import { User } from './entity/user.entity';
 
 const NAMESPACE = 'Server';
 const router = express();
